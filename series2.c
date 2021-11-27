@@ -8,6 +8,7 @@ int main()
 	for(i=1;i<=5;i++)
 	{
 		f=fact(i);
+		printf("%d",f)
 		sum+=f/i;
 	}
 	printf("SUM=%f",sum);
@@ -21,4 +22,5 @@ int fact(int n)
 		f*=n;
 		n--;
 	}
+	return f;
 }

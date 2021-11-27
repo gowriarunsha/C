@@ -8,7 +8,7 @@ int main()
 	printf("Input a number:");
 	scanf("%d",p);	//p stores adress of n
 		
-	printf("Number:%d",*p);
+	printf("Number:%d\tAdress:%d",*p,p);
 	
 	
 }

@@ -1,29 +1,29 @@
-//program to sort array using bubble sort
+//program to sort an array using insertion sort
 #include<stdio.h>
 #define MAX 100
-
 int main()
 {
-	int i,j,n,temp;
+	int i,j,n,key,temp;
 	int A[MAX];
 	printf("Input n:");
 	scanf("%d",&n);
+	printf("Input array elements:\n");
 	for(i=0;i<n;i++)
 	{
 		scanf("%d",&A[i]);
 	}
-	//bubblesort
-	for(i=0;i<n-1;i++)
+	//insertionsort
+	for(i=1;i<n;i++)
 	{
-		for(j=0;j<n-i-1;j++)
+		key=A[i];
+		j=i-1;
+		while(j>=0&&A[j]>key)
 		{
-			if(A[j]>A[j+1])
-			{
-			temp=A[j];
-			A[j]=A[j+1];
-			A[j+1]=temp;
+			A[j+1]=A[j];
+			j--;
 		}
-		}
+		A[j+1]=key;
+		
 	}
 	//display
 	printf("Sorted array:");
@@ -31,5 +31,5 @@ int main()
 	{
 		printf("%d\t",A[i]);
 	}
-	
 }
+
